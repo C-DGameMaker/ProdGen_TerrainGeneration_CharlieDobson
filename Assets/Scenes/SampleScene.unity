@@ -964,6 +964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeshGenerator
   xSize: 20
   zSize: 20
+  minimumInclusiveHeight: -100
+  maximunExclusiveHeight: 101
 --- !u!23 &1985786024
 MeshRenderer:
   m_ObjectHideFlags: 0
