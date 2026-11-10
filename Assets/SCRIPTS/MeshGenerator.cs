@@ -13,6 +13,9 @@ public class MeshGenerator : MonoBehaviour
     public int xSize = 20;
     public int zSize = 20;
 
+    public int minimumInclusiveHeight;
+    public int maximunExclusiveHeight;
+
     private void Start()
     {
         mesh = new Mesh();
@@ -35,7 +38,7 @@ public class MeshGenerator : MonoBehaviour
         {
             for (int x = 0; x <= xSize; x++)
             {
-                float y = Mathf.PerlinNoise(x * .3f, z * .3f) * Random.Range(2, 5);
+                float y = Mathf.PerlinNoise(x * .3f, z * .3f) * Random.Range(minimumInclusiveHeight, maximunExclusiveHeight);
                 vertices[index] = new Vector3(x, y, z);
                 index++;
             }
